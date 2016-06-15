@@ -14,7 +14,7 @@ Actions:
 -if guess is wrong, lose a turn
 -if guess is right, fill in letter on game board
 -Add DOM nodes for the word (i.e. underscores: "_ _ _ _")
--
+-game over
 
 Notes on array access:
 [1,2,3,4,5]
@@ -42,6 +42,8 @@ Math.random() - gives you a random floating point number between 0 and 1.
 Math.random() * wordList.length - multiplies by the number of array items.
 Math.floor (Math.random() * wordList.length)) - rounds down number to nearest integer.
 
+
+**UPDATE THIS with final line numbers**
 note that JS ln 36ff differ from Brit's code. He approaches this by going for the guesses array instead, and uses .includes() instead of .contains()
 
 class.js ln 37 - event.target.classList.add("guessed"); - adds "guessed" to the class of the event.target 

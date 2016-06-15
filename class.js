@@ -1,14 +1,8 @@
-var sayHi = function(name) {
-	console.log("Hello there, " + name);
-};
-
-/*sayHi("Will");
-
-console.log("Hangman is just a game.");
 
 document.getElementById("turn-count")
-	<span id="turn-count">7</span>   - this is a DOM node.
+//	<span id="turn-count">7</span>   - this is a DOM node.
 
+/*
 Data:
 x-Words/dictionary
 x-guesses
@@ -88,27 +82,9 @@ var el = document.querySelector("#turn-count");
 el.addEventListener('click', bumpCount);
 
 var letters = document.querySelector(".alphabet");
-letters.addEventListener('click', function (event) {
-	var text = event.target.textContent;
-	console.log(text);
+letters.addEventListener('click', function(event){
+		event.target.classList.add("guessed");
+		guesses.push(event.target.textContent);
 });
-
-//var target = null; 
-//var el = document.querySelector("#turn-count");
-// el.addEventListener('click', function(e){
-// 		console.log(e);
-// 		target = e.target;
-// });
-
-//When we click the update count button, I want the JS to update the HTML to whatever the user typed in.
-
-// var butt = document.querySelector(".form-button");
-// butt.addEventListener('click', function(event){
-// 	event.preventDefault();   This prevents the page from refreshing when the form is submitted, which is the default setting for a form.
-// 	var input = document.querySelector(".count-input");
-// 	console.log(input.value); /*gives whatever value the user typed in*/
-// 	var turns = document.querySelector("#turn-count");
-// 	turns.textContent = input.value;
-// });
 
 //Brit's code and notes can be found here: https://github.com/tiy-atl-js-june-2016/hangman/commits/master

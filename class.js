@@ -19,6 +19,15 @@ var removeGuess = function(e) {
 	console.log(e);
 };
 
+var board = document.querySelector("#board");
+var newHTML = "";
+for(var count = 0; count < answer.length; count++) {
+  newHTML += "<span>_</span>";
+};
+board.innerHTML = newHTML;
+
+
+
 var bumpCount = function(event){
 		var target = event.target;
 		target.innerHTML = Number(target.innerHTML) +1;

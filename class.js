@@ -1,4 +1,3 @@
-
 document.getElementById("turn-count")
 
 var turnsLeft=function() {
@@ -34,9 +33,14 @@ var el = document.querySelector("#turn-count");
 el.addEventListener('click', bumpCount);
 
 var letters = document.querySelector(".alphabet");
-letters.addEventListener('click', function(event){
-		event.target.classList.add("guessed");
-		guesses.push(event.target.textContent);
+letters.addEventListener('click', function(event){ 
+		var pageNode = event.target;
+		if !(pageNode.classList.contains("guessed")) {
+			pageNode.classList.add("guessed");
+			guesses.push(pageNode.textContent);
+		} else {
+			alert("You guessed that already.");
+		}
 });
 
 //Brit's code and notes can be found here: https://github.com/tiy-atl-js-june-2016/hangman/commits/master
